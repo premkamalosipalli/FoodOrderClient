@@ -16,7 +16,7 @@ export class UserComponent implements OnInit {
     private loginRegisterService: LoginRegisterService,) { }
 
   ngOnInit(): void {
-    this.loginRegisterService.getAllUsersByRole("deliver").subscribe(
+    this.loginRegisterService.getAllUsersByRole("user").subscribe(
       data => {
         this.users = data;
       }
