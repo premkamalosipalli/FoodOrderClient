@@ -42,17 +42,17 @@ export class HomeComponent implements OnInit {
       }
     );
 
-    // this.loginRegisterService.countByRestaurant().subscribe(
-    //   data => {
-    //     this.countUsers = data;
-    //   }
-    // );
+    this.loginRegisterService.countByRestaurant().subscribe(
+      data => {
+        this.countRestaurants = data;
+      }
+    );
 
-    // this.loginRegisterService.countByRestaurantItems().subscribe(
-    //   data => {
-    //     this.countUsers = data;
-    //   }
-    // );
+    this.loginRegisterService.countByRestaurantItems().subscribe(
+      data => {
+        this.countRestaurantItems = data;
+      }
+    );
   }
 
 }
