@@ -1,0 +1,28 @@
+<app-admin></app-admin>
+<h2>Restaurant Item Details</h2> 
+
+<hr/>
+<div *ngIf="restaurantItem">
+    <div>
+        <label><b>Restaurant Name: </b></label> {{restaurantName}}
+    </div>
+  <div>
+    <label><b>Restaurant Name: </b></label> {{restaurantItem.restaurantItemName}}
+  </div>
+  <div>
+    <label><b>Image Location: </b></label><img height="30" src="/assets/Images/{{restaurantItem.imageLocation}}"/>
+  </div>
+  <div>
+    <label><b>Description Name: </b></label> {{restaurantItem.description}}
+  </div>
+  <div>
+    <label><b>Street: </b></label> {{restaurantItem.itemPrice}}
+  </div>  
+  <div>
+    <button (click)="updateRestaurantItem(restaurantItem.restaurantItemId)" class="btn btn-primary">Update</button>
+  </div> 
+  <div>
+    <button (click)="listRestaurantItems()" class="btn btn-primary">Back</button><br>
+  </div>
+</div>
+
