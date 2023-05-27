@@ -38,4 +38,14 @@ export class LoginRegisterService {
   deleteUser(userId:number):Observable<any>{
     return this.http.delete(`${this.baseUrl}/user/${userId}`)
   }
+
+  countByRestaurantItems():Observable<any> {
+    return this.http.get(`${this.baseUrl}/countRestaurantItems`)
+  }
+
+  countByRestaurant():Observable<any> {
+    return this.http.get(`${this.baseUrl}/countRestaurants`)
+  }
+
+
 }
