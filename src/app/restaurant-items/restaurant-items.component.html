@@ -1,0 +1,21 @@
+<app-admin></app-admin>
+<div class="tab-pane fade show active" id="restaurantItems" role="tabpanel" aria-labelledby="restaurantItems-tab">
+
+  <form [formGroup]="selectRestaurant" (ngSubmit)="submit()">
+
+      <label class="label text-center">Select Restaurant:</label>
+      <div class="col-sm-10">
+        <select class="browser-default custom-select text-center" name="restaurant" (change)="getRestaurnat($event)" id="restaurant" [(ngModel)]="restaurant" [ngModelOptions]="{standalone: true}">
+          <option selected>Select Restaurant</option>
+          <option class="restaurants" *ngFor="let restaurant of restaurants" [ngValue] = "restaurant.restaurantId">{{restaurant.restaurantName}}
+          </option>
+        </select>
+    </div>
+    <div class="text-center">
+      <label class="form-label"></label>
+      <button type="submit" class="btn btn-outline-dark">Submit</button>
+    </div>
+  </form>
+  
+  
+</div>

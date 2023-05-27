@@ -1,0 +1,36 @@
+<app-admin></app-admin>
+<div class="tab-pane fade text-center show active" id="delivery" role="tabpanel" aria-labelledby="delivery-tab">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2>Delivery Agents List</h2>
+      </div>
+      <div class="panel-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>UserName</th>
+              <th>Role</th>
+              <th>EmailId</th>
+              <th>Phone Number</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users">
+              <td>{{user.firstName}}</td>
+              <td>{{user.lastName}}</td>
+              <td>{{user.userName}}</td>
+              <td>{{user.role}}</td>
+              <td>{{user.emailId}}</td>
+              <td>{{user.phoneNumber}}</td>
+              <td><button (click)="deleteDelivery(user.userId)" class="btn btn-outline-danger">Delete</button>
+                  <button (click)="deliverDetails(user.userId)" class="btn btn-outline-info" style="margin-left: 10px">Details</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
